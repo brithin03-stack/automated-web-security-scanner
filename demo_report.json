@@ -1,0 +1,62 @@
+{
+  "target": "https://example.com",
+  "scanned_at_utc": "2026-10-23T10:36:14.019964+00:00",
+  "status": "completed",
+  "http_status": 200,
+  "final_url": "https://example.com/",
+  "https_used": true,
+  "findings": [
+    {
+      "severity": "High",
+      "title": "Missing Strict-Transport-Security",
+      "evidence": "Response did not include this header.",
+      "recommendation": "Configure HSTS on HTTPS sites after confirming all required subdomains support HTTPS."
+    },
+    {
+      "severity": "High",
+      "title": "Missing Content-Security-Policy",
+      "evidence": "Response did not include this header.",
+      "recommendation": "Define a policy appropriate to the application; start in report-only mode if needed."
+    },
+    {
+      "severity": "Medium",
+      "title": "Missing X-Content-Type-Options",
+      "evidence": "Response did not include this header.",
+      "recommendation": "Set X-Content-Type-Options: nosniff."
+    },
+    {
+      "severity": "Medium",
+      "title": "Missing X-Frame-Options",
+      "evidence": "Response did not include this header.",
+      "recommendation": "Set X-Frame-Options: DENY or SAMEORIGIN, or use CSP frame-ancestors."
+    },
+    {
+      "severity": "Low",
+      "title": "Missing Referrer-Policy",
+      "evidence": "Response did not include this header.",
+      "recommendation": "Consider strict-origin-when-cross-origin or a policy suitable for the site."
+    },
+    {
+      "severity": "Low",
+      "title": "Missing Permissions-Policy",
+      "evidence": "Response did not include this header.",
+      "recommendation": "Set a policy that disables features the application does not need."
+    },
+    {
+      "severity": "Low",
+      "title": "Server header disclosed",
+      "evidence": "cloudflare",
+      "recommendation": "Consider minimizing unnecessary product/version disclosure."
+    }
+  ],
+  "notes": [
+    "This is a lightweight header/configuration review, not a penetration test.",
+    "A missing header is not proof that a site is vulnerable; assess application context."
+  ],
+  "summary": {
+    "high": 2,
+    "medium": 2,
+    "low": 3,
+    "info": 0
+  }
+}

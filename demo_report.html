@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Security Scan Report</title>
+<style>
+
+body{font-family:Arial,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#202124}
+h1{color:#17365d} .meta{background:#f2f5f8;padding:1rem;border-radius:8px}
+table{border-collapse:collapse;width:100%;margin-top:1rem}th,td{border:1px solid #d5dbe1;padding:.65rem;text-align:left;vertical-align:top}
+th{background:#eaf0f6} .note{color:#555;font-size:.92rem}
+
+</style></head><body>
+<h1>Automated Web Security Scanner Report</h1>
+<div class="meta">
+<p><b>Target:</b> https://example.com</p><p><b>Scan time (UTC):</b> 2026-10-23T10:36:14.019964+00:00</p>
+<p><b>Status:</b> completed | <b>HTTP status:</b> 200</p>
+<p><b>Final URL:</b> https://example.com/</p>
+<p><b>Summary:</b> High: 2 · Medium: 2 · Low: 3 · Informational: 0</p>
+</div>
+
+<table><thead><tr><th>Severity</th><th>Finding</th><th>Evidence</th><th>Recommendation</th></tr></thead>
+<tbody><tr><td>High</td><td>Missing Strict-Transport-Security</td><td>Response did not include this header.</td><td>Configure HSTS on HTTPS sites after confirming all required subdomains support HTTPS.</td></tr><tr><td>High</td><td>Missing Content-Security-Policy</td><td>Response did not include this header.</td><td>Define a policy appropriate to the application; start in report-only mode if needed.</td></tr><tr><td>Medium</td><td>Missing X-Content-Type-Options</td><td>Response did not include this header.</td><td>Set X-Content-Type-Options: nosniff.</td></tr><tr><td>Medium</td><td>Missing X-Frame-Options</td><td>Response did not include this header.</td><td>Set X-Frame-Options: DENY or SAMEORIGIN, or use CSP frame-ancestors.</td></tr><tr><td>Low</td><td>Missing Referrer-Policy</td><td>Response did not include this header.</td><td>Consider strict-origin-when-cross-origin or a policy suitable for the site.</td></tr><tr><td>Low</td><td>Missing Permissions-Policy</td><td>Response did not include this header.</td><td>Set a policy that disables features the application does not need.</td></tr><tr><td>Low</td><td>Server header disclosed</td><td>cloudflare</td><td>Consider minimizing unnecessary product/version disclosure.</td></tr></tbody></table>
+<h2>Scope and limitations</h2><ul><li>This is a lightweight header/configuration review, not a penetration test.</li><li>A missing header is not proof that a site is vulnerable; assess application context.</li></ul>
+<p class="note">Educational use only. Scan only systems you own or are authorized to assess. This report checks a limited set of HTTP response configuration signals and does not establish that a site is secure or insecure.</p>
+</body></html>
