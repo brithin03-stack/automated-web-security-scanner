@@ -1,6 +1,6 @@
 {
   "target": "https://example.com",
-  "scanned_at_utc": "2026-10-23T10:36:14.019964+00:00",
+  "scanned_at_utc": "2026-10-23T11:11:20.127164+00:00",
   "status": "completed",
   "http_status": 200,
   "final_url": "https://example.com/",
